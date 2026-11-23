@@ -7,7 +7,7 @@ import { localInputPath, sameRemote } from './connections';
 import { Conflict, Connection, Content, MountState, RemoteSnapshot, UserError } from './types';
 import { VaultExportModal } from './export-ui';
 
-export const VIEW_TYPE = 'github-sync-zev-explorer';
+export const VIEW_TYPE = 'repo-relay-zev-explorer';
 
 function action(parent: HTMLElement, label: string, callback: () => void, primary = false): ButtonComponent {
   const button = new ButtonComponent(parent).setButtonText(label).onClick(callback);

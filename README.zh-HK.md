@@ -1,4 +1,4 @@
-# GitHub Sync - Zev
+# RepoRelay by Zev
 
 作者：**Zev** · MIT 授權 · 最低 Obsidian：**1.11.4**
 
@@ -24,9 +24,9 @@
 
 呢個專案準備好手動安裝；Obsidian 社群商店收錄仍然要另外提交審核。
 
-1. 下載 release 嘅 `github-sync-zev-1.1.2.zip`。
-2. 將入面嘅 `github-sync-zev` folder 放入 `<vault>/.obsidian/plugins/`。如果有自訂設定目錄，就改用該目錄。
-3. 重新開 Obsidian，到「設定 → 第三方外掛」啟用 **GitHub Sync - Zev**。
+1. 下載 release 嘅 `repo-relay-zev-1.2.1.zip`。
+2. 將入面嘅 `repo-relay-zev` folder 放入 `<vault>/.obsidian/plugins/`。如果有自訂設定目錄，就改用該目錄。
+3. 重新開 Obsidian，到「設定 → 第三方外掛」啟用 **RepoRelay by Zev**。
 
 ## 開 GitHub folder
 

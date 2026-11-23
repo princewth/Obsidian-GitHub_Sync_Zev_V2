@@ -28,12 +28,12 @@ export default class GitHubSyncZev extends Plugin {
 
   async onload(): Promise<void> {
     try {
-      let deviceKey: unknown = this.app.loadLocalStorage('github-sync-zev-device-key');
+      let deviceKey: unknown = this.app.loadLocalStorage('repo-relay-zev-device-key');
       if (typeof deviceKey !== 'string' || !/^[a-z0-9-]+$/.test(deviceKey)) {
         deviceKey = crypto.randomUUID();
-        this.app.saveLocalStorage('github-sync-zev-device-key', deviceKey);
+        this.app.saveLocalStorage('repo-relay-zev-device-key', deviceKey);
       }
-      this.secretId = `github-sync-zev-${String(deviceKey)}`;
+      this.secretId = `repo-relay-zev-${String(deviceKey)}`;
       this.store = new DeviceStore(String(deviceKey));
       await this.store.open();
       this.bridge = new VaultBridge(this.app, () => this.store.data.settings.maxFileMB * 1024 * 1024);

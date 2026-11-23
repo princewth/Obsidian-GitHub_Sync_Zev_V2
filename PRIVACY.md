@@ -1,6 +1,6 @@
 # Privacy and data handling
 
-GitHub Sync - Zev is authored by Zev. The public distribution contains plugin code and documentation, not a user's connections, notes, or credentials.
+RepoRelay by Zev is authored by Zev. The public distribution contains plugin code and documentation, not a user's connections, notes, or credentials.
 
 ## Data inventory
 
@@ -15,7 +15,7 @@ GitHub Sync - Zev is authored by Zev. The public distribution contains plugin co
 | Standalone snapshot files and generated link graph | Constructed from a reviewed full-vault preview | The selected repository, after the explicit save action |
 | Snapshot destination, counts, and publication commit/status | Device-local IndexedDB | GitHub for publication verification; not included in diagnostics |
 
-The plugin does not write a `data.json`, token file, or note cache into its own plugin folder. Its IndexedDB database is named `github-sync-zev-device-v1`. Each vault uses a separate randomly keyed record. Connection metadata is intentionally not synchronized across devices.
+The plugin does not write a `data.json`, token file, or note cache into its own plugin folder. Its IndexedDB database is named `repo-relay-zev-device-v1`. Each vault uses a separate randomly keyed record. Connection metadata is intentionally not synchronized across devices.
 
 Obsidian controls SecretStorage, its encryption/access behavior, and app/profile backup behavior. This plugin does not claim that all local device storage is encrypted, nor can it isolate secrets from other trusted plugins running in the same application. IndexedDB contains real note versions and should be treated as private application data.
 

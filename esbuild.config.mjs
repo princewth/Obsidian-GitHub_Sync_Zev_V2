@@ -10,7 +10,7 @@ const options = {
   outfile: 'main.js',
   sourcemap: false,
   legalComments: 'none',
-  banner: { js: '/* GitHub Sync - Zev | MIT | Third-party notices: THIRD_PARTY_NOTICES.md */' }
+  banner: { js: '/* RepoRelay by Zev | MIT | Third-party notices: THIRD_PARTY_NOTICES.md */' }
 };
 
 if (process.argv.includes('--watch')) {

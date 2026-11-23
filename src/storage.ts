@@ -39,7 +39,7 @@ export class DeviceStore implements StateRepository {
   private db: IDBDatabase | null = null;
   private writes: Promise<void> = Promise.resolve();
 
-  constructor(private readonly key: string, private readonly databaseName = 'github-sync-zev-device-v1') {}
+  constructor(private readonly key: string, private readonly databaseName = 'repo-relay-zev-device-v1') {}
 
   async open(): Promise<void> {
     this.db = await new Promise<IDBDatabase>((resolve, reject) => {

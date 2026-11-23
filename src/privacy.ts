@@ -4,7 +4,7 @@ import { StoredState } from './types';
 export function diagnostics(state: StoredState, version: string): string {
   const mounts = Object.values(state.mounts);
   return JSON.stringify({
-    plugin: 'github-sync-zev',
+    plugin: 'repo-relay-zev',
     version,
     schema: state.schema,
     connections: mounts.length,

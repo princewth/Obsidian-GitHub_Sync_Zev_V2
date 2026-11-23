@@ -1,12 +1,12 @@
-# Publish GitHub Sync - Zev
+# Publish RepoRelay by Zev
 
-The public name is **GitHub Sync - Zev**, author **Zev**, plugin ID **github-sync-zev**. No personal GitHub account, private repository URL, device path, or token is embedded. Replace the repository placeholders below with the public repository you own; do not put credentials into its URL.
+The public name is **RepoRelay by Zev**, author **Zev**, plugin ID **repo-relay-zev**. No personal GitHub account, private repository URL, device path, or token is embedded. Replace the repository placeholders below with the public repository you own; do not put credentials into its URL.
 
-The [manifest naming rules](https://docs.obsidian.md/Reference/Manifest#name) permit Basic Latin characters and only hyphens, plus signs, and parentheses as punctuation. Underscores are not permitted in the display name. Version 1.1.1 corrected the name while keeping the plugin ID stable; version 1.1.2 repairs source layout and automatic asset publication. Commit the corrected root manifest on the default branch and publish the matching 1.1.2 release before submitting again.
+The [manifest naming rules](https://docs.obsidian.md/Reference/Manifest#name) permit Basic Latin characters and only hyphens, plus signs, and parentheses as punctuation. Underscores are not permitted in the display name. Version 1.1.1 corrected the name while keeping the plugin ID stable; version 1.2.1 repairs source layout and automatic asset publication. Commit the corrected root manifest on the default branch and publish the matching 1.2.1 release before submitting again.
 
 ## Prepare the public repository
 
-1. Create a public GitHub repository for this plugin using your chosen public account/alias, for example a repository named `github-sync-zev`.
+1. Create a public GitHub repository for this plugin using your chosen public account/alias, for example a repository named `repo-relay-zev`.
 2. Extract the source archive and upload its project contents, or push the source tree. The repository's default branch must have `README.md`, `LICENSE`, and `manifest.json` directly at its root, alongside `src/`, package/build files, and the other project files. The source ZIP contains only allowlisted project files. Do not upload a vault or an Obsidian profile.
 3. Use a public Git author alias and GitHub noreply email for your own source commits if you want to keep personal identity private. GitHub account association and previous commits are controlled by GitHub.
 4. Check the actual repository files and history before making an existing private repository public. The provided package check inspects this source/release allowlist, not an arbitrary repository's entire Git history.
@@ -23,8 +23,8 @@ Inspect `dist/`:
 
 - `main.js`, `manifest.json`, `styles.css`: the Obsidian release assets.
 - `LICENSE`, `THIRD_PARTY_NOTICES.md`: redistribution notices.
-- `github-sync-zev-1.1.2.zip`: installable plugin folder.
-- `github-sync-zev-1.1.2-source.zip`: allowlisted source project.
+- `repo-relay-zev-1.2.1.zip`: installable plugin folder.
+- `repo-relay-zev-1.2.1-source.zip`: allowlisted source project.
 - `SHA256SUMS`: checksums for the distributed assets.
 
 No `data.json`, `.env`, `.npmrc`, private key, source map, developer dependency tree, device database, or vault cache is packaged. The public-file scanner detects common credential formats and private absolute path formats; it is not a promise that arbitrary future edits contain no sensitive text. Inspect changes before publishing.
@@ -33,11 +33,11 @@ Complete [TESTING.md](TESTING.md) on your actual Obsidian installations and a di
 
 ## GitHub release
 
-The included GitHub Actions workflow builds and publishes when the manifest changes on `main`, when the publishing workflow changes, on a manual workflow run, or when you push a matching plain version tag such as `1.1.2` (without `v`). It runs package checks, creates a draft release, attaches the required files directly, publishes it with the version in the title, and verifies the assets. The release tag targets the exact source commit that was built.
+The included GitHub Actions workflow builds and publishes when the manifest changes on `main`, when the publishing workflow changes, on a manual workflow run, or when you push a matching plain version tag such as `1.2.1` (without `v`). It runs package checks, creates a draft release, attaches the required files directly, publishes it with the version in the title, and verifies the assets. The release tag targets the exact source commit that was built.
 
-Alternatively, create a GitHub Release manually with tag `1.1.2` and attach the files listed above. The three Obsidian assets must be directly attached to the release, not only nested inside a ZIP. No personal access token needs to be committed; the workflow uses GitHub's built-in short-lived repository token.
+Alternatively, create a GitHub Release manually with tag `1.2.1` and attach the files listed above. The three Obsidian assets must be directly attached to the release, not only nested inside a ZIP. No personal access token needs to be committed; the workflow uses GitHub's built-in short-lived repository token.
 
-For the manual GitHub interface: open your plugin repository, go to **Releases → Draft a new release**, create tag **1.1.2** on the default branch, and attach `main.js`, `manifest.json`, and `styles.css` from the installable ZIP as individual files. Include the licenses/notices as additional assets, then publish the release. The tag exactly matches the current root manifest's version.
+For the manual GitHub interface: open your plugin repository, go to **Releases → Draft a new release**, create tag **1.2.1** on the default branch, and attach `main.js`, `manifest.json`, and `styles.css` from the installable ZIP as individual files. Include the licenses/notices as additional assets, then publish the release. The tag exactly matches the current root manifest's version.
 
 ## Submit to the Obsidian community directory
 
@@ -47,8 +47,8 @@ The current official submission flow uses the [Obsidian Community directory](htt
 2. Go to **community.obsidian.md → Sign in** and use an Obsidian account. Create an Obsidian account if needed.
 3. In **Community profile → GitHub → Connect**, authorize the official GitHub connection. It verifies repository ownership using read-only public-profile access. The plugin's synchronization token stays in Obsidian and is not needed in the submission form.
 4. Set your intended public profile name, such as **Zev**, and review which profile details you want to publish.
-5. Open **Plugins → New plugin**. Set **GitHub repository URL** to your public plugin source repository, for example `https://github.com/YOUR_PUBLIC_GITHUB_USERNAME/github-sync-zev`. Choose yourself or an appropriate organization as **Owner**.
-6. Review and agree to the developer policies and confirm that you will maintain the entry, then select **Submit**. The directory reads `manifest.json` from the HEAD of the repository's default branch. Its ID must be unique across published plugins and must not contain `obsidian`; this project's ID is `github-sync-zev`.
+5. Open **Plugins → New plugin**. Set **GitHub repository URL** to your public plugin source repository, for example `https://github.com/YOUR_PUBLIC_GITHUB_USERNAME/repo-relay-zev`. Choose yourself or an appropriate organization as **Owner**.
+6. Review and agree to the developer policies and confirm that you will maintain the entry, then select **Submit**. The directory reads `manifest.json` from the HEAD of the repository's default branch. Its ID must be unique across published plugins and must not contain `obsidian`; this project's ID is `repo-relay-zev`.
 7. Review the automated feedback shown in the directory. Fix any reported problems, increment the plugin version consistently, and publish a matching new GitHub release when needed.
 8. Edit the listing description and use **Publish** as directed by the directory. The entry becomes installable within Obsidian only after automated review errors have been resolved and the publishing requirements have been met. Preparing a source ZIP or passing this project's tests does not itself approve the plugin.
 

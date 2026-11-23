@@ -40,7 +40,7 @@ jobs:
           if ! gh release view "$RELEASE_VERSION" --repo "$PUBLIC_REPOSITORY" >/dev/null 2>&1; then
             gh release create "$RELEASE_VERSION" --repo "$PUBLIC_REPOSITORY" --target "$GITHUB_SHA" --draft --title "$RELEASE_NAME $RELEASE_VERSION" --notes-file CHANGELOG.md
           fi
-          gh release upload "$RELEASE_VERSION" dist/main.js dist/manifest.json dist/styles.css dist/LICENSE dist/THIRD_PARTY_NOTICES.md dist/github-sync-zev-*.zip dist/SHA256SUMS --repo "$PUBLIC_REPOSITORY" --clobber
+          gh release upload "$RELEASE_VERSION" dist/main.js dist/manifest.json dist/styles.css dist/LICENSE dist/THIRD_PARTY_NOTICES.md dist/repo-relay-zev-*.zip dist/SHA256SUMS --repo "$PUBLIC_REPOSITORY" --clobber
           gh release edit "$RELEASE_VERSION" --repo "$PUBLIC_REPOSITORY" --title "$RELEASE_NAME $RELEASE_VERSION" --notes-file CHANGELOG.md --draft=false
       - name: Verify public release assets
         env:
