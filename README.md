@@ -1,4 +1,4 @@
-# RepoRelay by Zev
+# GitHub Relay
 
 Open a GitHub repository folder inside Obsidian, edit Markdown with the native editor, and synchronize changes without installing Git.
 
@@ -37,9 +37,9 @@ Original plugin settings, tokens, workspace history, caches, and app preferences
 Until this plugin has been accepted into the Obsidian community directory, install a release manually:
 
 1. Use Obsidian 1.11.4 or newer.
-2. Download `repo-relay-zev-1.2.1.zip` from this repository's Releases page.
+2. Download `repo-relay-zev-1.2.2.zip` from this repository's Releases page.
 3. Extract its `repo-relay-zev` folder into `<vault>/.obsidian/plugins/`. If you use a custom configuration directory, use that directory instead of `.obsidian`.
-4. Reload Obsidian, open **Settings → Community plugins**, and enable **RepoRelay by Zev**.
+4. Reload Obsidian, open **Settings → Community plugins**, and enable **GitHub Relay**.
 
 Alternatively, put `main.js`, `manifest.json`, and `styles.css` from the same release in that plugin folder. Keep the accompanying license and third-party notices when redistributing it. This project is independent of Obsidian and GitHub.
 

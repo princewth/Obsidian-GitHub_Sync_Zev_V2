@@ -1,6 +1,6 @@
 # Privacy and data handling
 
-RepoRelay by Zev is authored by Zev. The public distribution contains plugin code and documentation, not a user's connections, notes, or credentials.
+GitHub Relay is authored by Zev. The public distribution contains plugin code and documentation, not a user's connections, notes, or credentials.
 
 ## Data inventory
 

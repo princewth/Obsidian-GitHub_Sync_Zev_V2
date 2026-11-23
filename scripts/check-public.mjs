@@ -8,7 +8,7 @@ if (typeof manifest.name !== 'string' || manifest.name !== manifest.name.trim() 
   throw new Error('Plugin display name must follow the Obsidian manifest naming guidelines. Use Basic Latin letters/numbers/spaces and only hyphens, plus signs, or parentheses as punctuation.');
 }
 if (!/^[a-z]+(?:-[a-z]+)*$/.test(manifest.id) || manifest.id.includes('obsidian') || manifest.id.endsWith('plugin')) throw new Error('Plugin ID must follow the Obsidian manifest guidelines.');
-if (manifest.id !== 'repo-relay-zev' || manifest.author !== 'Zev' || manifest.name !== 'RepoRelay by Zev') throw new Error('Unexpected public plugin identity.');
+if (manifest.id !== 'repo-relay-zev' || manifest.author !== 'Zev' || manifest.name !== 'GitHub Relay') throw new Error('Unexpected public plugin identity.');
 if (manifest.version !== pkg.version || versions[manifest.version] !== manifest.minAppVersion) throw new Error('Release version metadata is inconsistent.');
 if (manifest.minAppVersion !== '1.11.4' || manifest.isDesktopOnly !== false) throw new Error('Recheck runtime compatibility before changing the manifest.');
 

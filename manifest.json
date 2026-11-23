@@ -1,7 +1,7 @@
 {
   "id": "repo-relay-zev",
-  "name": "RepoRelay by Zev",
-  "version": "1.2.1",
+  "name": "GitHub Relay",
+  "version": "1.2.2",
   "minAppVersion": "1.11.4",
   "description": "Connect GitHub folders, sync notes offline, and save standalone vaults with linked Markdown reading views.",
   "author": "Zev",

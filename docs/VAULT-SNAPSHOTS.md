@@ -49,4 +49,4 @@ GitHub has no native Obsidian runtime. Note embeds become navigable references r
 
 ## Upgrade
 
-RepoRelay uses its own connection storage. Disable the previous plugin before connecting the same vault folders in RepoRelay. Set your GitHub token and preview each connection again.
+GitHub Relay uses its own connection storage. Disable the previous plugin before connecting the same vault folders in GitHub Relay. Set your GitHub token and preview each connection again.
